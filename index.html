@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techmo - Mi Portafolio de IA</title>
+    <!-- Incluyendo Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #00f0ff, #a5b4fc, #00f0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .card-bg {
+            background-color: #1a202c;
+        }
+        .card-hover:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px 5px rgba(0, 240, 255, 0.4);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .neon-glow {
+            filter: drop-shadow(0 0 5px #00f0ff);
+        }
+        .animate-spin-slow {
+            animation: spin 10s linear infinite;
+        }
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-200">
+
+    <!-- Sección Principal (Hero) -->
+    <header class="card-bg shadow-2xl rounded-2xl p-8 md:p-16 mx-4 mt-8 md:mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-12 border-4 border-gray-800">
+        <div class="md:w-1/2">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                <span class="text-gradient">Techmo</span>
+            </h1>
+            <p class="mt-4 text-xl md:text-2xl font-semibold text-gray-300">
+                Construyendo el Futuro con Código e Inteligencia Artificial.
+            </p>
+            <p class="mt-6 text-lg text-gray-400">
+                Me apasiona el mundo de la IA y el Machine Learning. Aquí te presento una visión de mis habilidades y de cómo podemos usar esta tecnología para resolver problemas del mañana, hoy.
+            </p>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+            <!-- SVG de una bobina de Tesla estilizada -->
+            <svg class="w-full h-auto text-[#00f0ff] animate-pulse neon-glow" viewBox="0 0 100 100" fill="currentColor" stroke="none">
+                <path d="M50 10 C 66.5 10, 80 23.5, 80 40 S 66.5 70, 50 70 S 20 56.5, 20 40 C 20 23.5, 33.5 10, 50 10 Z" fill="none" stroke="currentColor" stroke-width="5" />
+                <path d="M50 30 C 58.3 30, 65 36.7, 65 45 S 58.3 60, 50 60 S 35 53.3, 35 45 C 35 36.7, 41.7 30, 50 30 Z" fill="none" stroke="currentColor" stroke-width="5" />
+                <line x1="50" y1="10" x2="50" y2="30" stroke="currentColor" stroke-width="3" />
+                <line x1="50" y1="60" x2="50" y2="90" stroke="currentColor" stroke-width="3" />
+                <line x1="35" y1="90" x2="65" y2="90" stroke="currentColor" stroke-width="3" />
+            </svg>
+        </div>
+    </header>
+
+    <!-- Sección de Habilidades -->
+    <main class="mx-4 md:mx-auto max-w-6xl mt-12 mb-8 space-y-12">
+        <section class="card-bg shadow-2xl rounded-2xl p-8 border-4 border-gray-800">
+            <h2 class="text-3xl font-bold text-center text-[#00f0ff] mb-6 neon-glow">Mis Habilidades en el Campo de la IA</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tarjeta 1: Visión por Computadora -->
+                <div class="p-6 rounded-xl shadow-inner border border-gray-700 card-hover">
+                    <div class="flex items-center space-x-4 mb-3">
+                        <span class="p-3 bg-gray-700 rounded-full neon-glow">
+                            <svg class="w-6 h-6 text-[#a5b4fc]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm-2-6c0 1.1.9 2 2 2s2-.9 2-2-.9-2-2-2-2 .9-2 2z"/></svg>
+                        </span>
+                        <h3 class="font-bold text-xl text-white">Visión por Computadora</h3>
+                    </div>
+                    <p class="text-gray-400">Desarrollo soluciones para que las máquinas vean y analicen imágenes. Desde detección de objetos hasta reconocimiento facial.</p>
+                </div>
+                <!-- Tarjeta 2: Procesamiento del Lenguaje Natural (NLP) -->
+                <div class="p-6 rounded-xl shadow-inner border border-gray-700 card-hover">
+                    <div class="flex items-center space-x-4 mb-3">
+                        <span class="p-3 bg-gray-700 rounded-full neon-glow">
+                            <svg class="w-6 h-6 text-[#a5b4fc]" fill="currentColor" viewBox="0 0 24 24"><path d="M10 9h4v2h-4v-2zm-2 2h2v2h-2v-2zm-2 2h2v2h-2v-2zm-2 2h2v2h-2v-2zm8-6h2v2h-2v-2zm2 2h2v2h-2v-2zm2 2h2v2h-2v-2zM4 5v14c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2h-3.17L14 3H8L7.17 5H4zm14 14H6V7h12v12z"/></svg>
+                        </span>
+                        <h3 class="font-bold text-xl text-white">NLP y Chatbots</h3>
+                    </div>
+                    <p class="text-gray-400">Implemento modelos para entender y generar lenguaje humano. He creado chatbots inteligentes y sistemas de análisis de texto.</p>
+                </div>
+                <!-- Tarjeta 3: Analítica Predictiva -->
+                <div class="p-6 rounded-xl shadow-inner border border-gray-700 card-hover">
+                    <div class="flex items-center space-x-4 mb-3">
+                        <span class="p-3 bg-gray-700 rounded-full neon-glow">
+                            <svg class="w-6 h-6 text-[#a5b4fc]" fill="currentColor" viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM10 15h4v-2h-4v2zM7 11h2V9H7v2zm8 0h2V9h-2v2z"/></svg>
+                        </span>
+                        <h3 class="font-bold text-xl text-white">Analítica de Datos</h3>
+                    </div>
+                    <p class="text-gray-400">Utilizo algoritmos de ML para analizar grandes volúmenes de datos y descubrir patrones que permiten tomar decisiones predictivas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section class="card-bg shadow-2xl rounded-2xl p-8 text-center border-4 border-gray-800">
+            <h2 class="text-3xl font-bold text-[#00f0ff] mb-4 neon-glow">Conectemos para el Futuro</h2>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-6">
+                Si compartes esta visión y te gustaría colaborar en algún proyecto o simplemente conectar, no dudes en contactarme.
+            </p>
+            <a href="https://wa.me/573128591013" class="inline-block bg-[#00f0ff] text-gray-900 font-bold py-3 px-6 rounded-full shadow-lg hover:bg-white transform hover:scale-105 transition-transform duration-300">
+                Enviar un Mensaje
+            </a>
+        </section>
+    </main>
+</body>
+</html>
